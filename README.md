@@ -24,3 +24,19 @@ API Tester is a simple Python application that allows users to retrieve response
 ```
 pip install requests
 ```
+3. Clone the Project: Clone the GitHub repository to your local machine:
+```
+git clone https://github.com/archescyber/api-tester/
+```
+```
+cd api-tester
+```
+# Usage
+
+To start the application, run the following command in your terminal or command prompt:
+```
+python main.py
+```
+Enter the API URL you want to test when prompted.
+
+The API response will be printed to the screen in JSON format.
