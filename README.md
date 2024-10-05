@@ -1,4 +1,4 @@
-**# API Tester
+# API Tester
 
 API Tester is a simple Python application that allows users to retrieve responses from a specified API URL. This project simplifies making basic API requests and displaying responses.
 
