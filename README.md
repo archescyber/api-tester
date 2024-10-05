@@ -40,3 +40,8 @@ python main.py
 Enter the API URL you want to test when prompted.
 
 The API response will be printed to the screen in JSON format.
+
+#Contribution
+Feel free to contribute to the project by submitting issues or pull requests. All contributions are welcome!
+
+For communication, you can send feedback to my Instagram account named **@yusuf.cyw**
