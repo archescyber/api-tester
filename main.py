@@ -1,22 +1,21 @@
 import os
 import requests
-from bs4 import BeautifulSoup
-from urllib.parse import urljoin, urlparse
-import os
 import platform
 
 def temizle():
     os_turu = platform.system()
-
     if os_turu == "Windows":
         os.system("cls")
-    elif os_turu == "Linux" or os_turu == "Darwin":
-        os.system("clear") 
+    elif os_turu in ["Linux", "Darwin"]:  # Linux ve macOS
+        os.system("clear")
     else:
         print("[<>] The purge command is not supported for this operating system.")
-print("")
-print("""
 
+# Clear the screen
+temizle()
+
+# Display title after clearing the screen
+print("""
              d8888          d8b                    
             d88888          Y8P                    
            d88P888                                 
@@ -36,10 +35,8 @@ print("""
     888  88888888 "Y8888b. 888    88888888 888     
     888  Y8b.          X88 Y88b.  Y8b.     888     
     888   "Y8888   88888P'  "Y888  "Y8888  888     
-                                                   
-""")                                                   
-                                                   
-# Temizleme fonksiyonunu çağır
+""")
+
 def fetch_api_response(url):
     try:
         response = requests.get(url)
@@ -50,9 +47,12 @@ def fetch_api_response(url):
         return None
 
 if __name__ == "__main__":
-    api_url = input("Please enter the API URL: ")
-    result = fetch_api_response(api_url)
+    try:
+        api_url = input("Please enter the API URL: ")
+        result = fetch_api_response(api_url)
 
-    if result is not None:
-        print("API Response:")
-        print(result)
+        if result is not None:
+            print("API Response:")
+            print(result)
+    except KeyboardInterrupt:
+        print("\n[<>] Program terminated by user.")
